@@ -16,7 +16,6 @@ export class PhotoService {
 
   async add(): Promise<Photo> {
     return await this.photoRepository.save({
-      id: 1,
       name: 'photo',
       description: 'photo',
       filename: 'name',

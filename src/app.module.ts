@@ -5,7 +5,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+
 import { PhotoModule } from './photo/photo.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -19,6 +21,7 @@ import { PhotoModule } from './photo/photo.module';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    AuthModule,
     PhotoModule,
   ],
   controllers: [AppController],
