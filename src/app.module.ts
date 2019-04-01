@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 
 import { PhotoModule } from './photo/photo.module';
 import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
     }),
     AuthModule,
     PhotoModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
